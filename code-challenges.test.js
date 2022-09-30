@@ -23,21 +23,23 @@
 // a) Create a test with an expect statement using the variable provided. 
 // HINT: Check out this resource: https://jestjs.io/docs/expect#expectarraycontainingarray
 
+// I will need to write the test function to pass the initial test check. Since shiftFunction hasn't been declared yet, the test will return a Reference Error indicating that shiftFunction has not been declared.
+
 describe ("shiftFunction", () => {
   it ("takes in an array, removes the first item from the array and shuffles the remaining content.", () => {
 
     expect(shiftFunction(colors1)).toEqual(["yellow", "blue", "pink", "green"])
-
     const colors1 = ["purple", "blue", "green", "yellow", "pink"]
     // Expected output example (can be a different order): ["yellow", "blue", "pink", "green"]
 
     expect(shiftFunction(colors2)).toEqual(["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saffron"])
-
-
     const colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saffron"]
     // Expected output example (can be a different order): ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
   })
 })
+
+// ReferenceError: shiftFunction is not defined
+    // As mentioned above, this is the expected error when first running a test function. 
 
 
 
@@ -48,10 +50,21 @@ describe ("shiftFunction", () => {
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const votes1 = {upVotes: 13, downVotes: 2}
-// Expected output: 11
-const votes2 = {upVotes: 2, downVotes: 33}
-// Expected output: -31
+describe ("netTotalVotes", () => {
+  it ("takes in an object that contains up votes and down votes and returns the net total of votes.", () => {
+
+    expect(netTotalVotes(votes1)).toEqual(11)
+    const votes1 = {upVotes: 13, downVotes: 2}
+    // Expected output: 11
+
+    expect(netTotalVotes(votes2)).toEqual(-31)
+    const votes2 = {upVotes: 2, downVotes: 33}
+    // Expected output: -31
+  })
+})
+
+// ReferenceError: netTotalVotes is not defined
+    // Expected error
 
 
 // b) Create the function that makes the test pass.
@@ -61,9 +74,17 @@ const votes2 = {upVotes: 2, downVotes: 33}
 
 // a) Create a test with an expect statement using the variables provided.
 
-const dataArray1 = ["array", "object", "number", "string", "Boolean"]
-const dataArray2 = ["string", "null", "Boolean", "string", "undefined"]
-// Expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
+describe ("noDuplicateArray", () => {
+    it ("takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.", () => {
+  
+      expect(noDuplicateArray(dataArray1, dataArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+        const dataArray1 = ["array", "object", "number", "string", "Boolean"]
+        const dataArray2 = ["string", "null", "Boolean", "string", "undefined"]
+        // Expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
+      
+    })
+  })
+
 
 
 // b) Create the function that makes the test pass.
