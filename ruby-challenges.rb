@@ -37,7 +37,12 @@ beatles_album2 = 'Sgt Pepper'
 beatles_album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
+def no_vowels string
+    const_string = string
+    p const_string
+end
 
+# no_vowels(beatles_album1)
 
 # -------------------3) Create a method that takes in a string and checks if the string is a palindrome. A palindrome is the same word spelled forward or backward. Use the test variables provided.
 
