@@ -10,7 +10,22 @@ num2 = 42
 num3 = 221
 # Expected output: '221 is odd'
 
+def odd_or_even (num)
+    if num.odd?
+        p "#{num} is odd."
+    elsif num.even?
+        p "#{num} is even"
+    else 
+        p 'Error'
+    end
+end
 
+odd_or_even(num1)
+# Output: "7 is odd."
+odd_or_even(num2)
+# Output: "42 is even"
+odd_or_even(num3)
+# Output: "221 is odd."
 
 # -------------------2) Create a method that takes in a string and removes all the vowels from the string. Use the test variables provided. 
 # HINT: Check out this resource: https://ruby-doc.org/core-2.6/String.html#method-i-delete
