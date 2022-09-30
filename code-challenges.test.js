@@ -85,6 +85,7 @@ describe ("noDuplicateArray", () => {
     })
   })
 
+//   ReferenceError: noDuplicateArray is not defined
 
 
 // b) Create the function that makes the test pass.
