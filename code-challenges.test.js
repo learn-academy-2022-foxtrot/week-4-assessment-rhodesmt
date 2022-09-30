@@ -13,13 +13,32 @@
 
 // --------------------1) Create a function that takes in an array, removes the first item from the array and shuffles the remaining content.
 
+// Jest template
+// describe ("functionNameHere", () => {
+//   it ("description of what the test function does/expected to do", () => {
+//     expect(functionNameHere(functionArgument)).toEqual(expected output here)
+//   })
+// })
+
 // a) Create a test with an expect statement using the variable provided. 
 // HINT: Check out this resource: https://jestjs.io/docs/expect#expectarraycontainingarray
 
-const colors1 = ["purple", "blue", "green", "yellow", "pink"]
-// Expected output example (can be a different order): ["yellow", "blue", "pink", "green"]
-const colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saffron"]
-// Expected output example (can be a different order): ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
+describe ("shiftFunction", () => {
+  it ("takes in an array, removes the first item from the array and shuffles the remaining content.", () => {
+
+    expect(shiftFunction(colors1)).toEqual(["yellow", "blue", "pink", "green"])
+
+    const colors1 = ["purple", "blue", "green", "yellow", "pink"]
+    // Expected output example (can be a different order): ["yellow", "blue", "pink", "green"]
+
+    expect(shiftFunction(colors2)).toEqual(["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saffron"])
+
+
+    const colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saffron"]
+    // Expected output example (can be a different order): ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
+  })
+})
+
 
 
 // b) Create the function that makes the test pass.
