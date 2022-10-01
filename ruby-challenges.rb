@@ -56,3 +56,18 @@ palindrome_tester2 = 'LEARN'
 # Expected output: 'LEARN is not a palindrome'
 palindrome_tester3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
+
+def palindrome_check (string)
+    if string.downcase == string.downcase.reverse
+        p "#{string} is a palindrome"
+    else
+        p "#{string} is not a palindrome"
+    end
+end
+
+palindrome_check(palindrome_tester1)
+# Expected output: 'Racecar is a palindrome'
+palindrome_check(palindrome_tester2)
+# Expected output: 'LEARN is not a palindrome'
+palindrome_check(palindrome_tester3)
+# Expected output: 'Rotator is a palindrome'
