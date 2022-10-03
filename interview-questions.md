@@ -31,7 +31,7 @@ Your answer:
 
 Researched answer:
 
-1. How do you extract a value in a Ruby hash?
+5. How do you extract a value in a Ruby hash?
 
 Your answer:
 
