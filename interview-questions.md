@@ -27,24 +27,33 @@ Researched answer: In Ruby, if a return is the last expression in a path of exec
 
 4. What is a block in Ruby?
 
-Your answer:
+Your answer: A block is almost like a function in Javascript, it is a separate line of code that is only initiated when called. Since everything in Ruby is an object and does not utilize functional programming, blocks are used to carry out similar processes in an Object-oriented programming language.
 
-Researched answer:
+Researched answer: A Ruby block is an anonymous function that is passed to a method to determine a specific outcome. They are annotated in Ruby with do and end as the keywords. Blocks can be helpful when wanting to display all of the information contained within a range.
+
+ (1..10).each do |value| 
+    p value
+ end 
+
+Output: 1/2/3/4...
 
 5. How do you extract a value in a Ruby hash?
 
-Your answer:
+Your answer: I believe you can use .map in Ruby to iterate over a hash to extract a specific value, but I'm not sure if it functions the same as in JavaScript where it will return the same number of values contained within the called upon array.
 
-Researched answer:
+Researched answer: I was incorrect, you do not need to use .map to extract a single value from within a hash. It is simply by logging the name of the hash, along with the corresponding key that we are wanting to identify. 
 
 ## Looking Ahead: Terms for Next Week
 
-1. PostgreSQL:
+1. PostgreSQL: PostgreSQL, also known as Postgres is one type of SQL (Structured Query Language- a domain-specific language used for communicating with relational databases) that is an open-source object-relational database management system. The main difference between Postgres and SQL being that Postgres uses an object-oriented programming format when searching databases.
 
-2. Ruby on Rails:
+2. Ruby on Rails: Ruby on Rails is the full-stack programming language used for Ruby languages, much like React with JavaScript. Ruby on Rails follows a model, view, and controller architectural topography. Model meaning the database layer, view is the part the user sees (UI/UX), the controller filters the relevant data from the model which is then used to contruct the view
 
-3. ORM:
+ (model)        (controller)         (view)
+databases-----> Ruby on Rails -----> UI/UX
 
-4. Active Record:
+3. ORM: ORM stands for Object-relational mapping and is a programming technique used for converting data between incompatible systems using object-oriented programming languages. It is a very powerful tool that allows developers to write SQL queries using Rails.
 
-5. Migrations:
+4. Active Record: A type of ORM; Active record takes data which is stored in a database table and lets you interact with the data like a Ruby object.
+
+5. Migrations: A tool that gives a developer the ability to manipulate the structure of a database overtime, and are executed by running SQL commands. Rails has a built-in feature that maintains a current running log of all migrations that have run, and those that have yet to be executed.
